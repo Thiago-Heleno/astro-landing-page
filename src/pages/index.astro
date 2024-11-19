@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Button } from "@/components/ui/button"
-import Dropdown from '@/components/dropdown'
 import '@/styles/globals.css'
+import CreativeLawyerLandingPage from '@/components/CreativeLawyerLandingPage';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Button client:load>Hello World</Button>
-		<Dropdown client:load/>
+		<CreativeLawyerLandingPage client:idle/>
 	</main>
 </Layout>
