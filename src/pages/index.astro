@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Button } from "@/components/ui/button"
+import Dropdown from '@/components/dropdown'
 import '@/styles/globals.css'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Button>Hello World</Button>
+		<Button client:load>Hello World</Button>
+		<Dropdown client:load/>
 	</main>
 </Layout>
