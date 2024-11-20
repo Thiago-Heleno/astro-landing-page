@@ -63,7 +63,11 @@ export default function EnhancedLawyerLandingPage() {
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
       <header className="bg-white bg-opacity-80 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold text-primary">
+          <a
+            href="./"
+            className="text-2xl font-bold text-primary"
+            aria-label="return to homepage"
+          >
             LegalSphere
           </a>
           <nav className="hidden md:flex space-x-8">
@@ -79,6 +83,7 @@ export default function EnhancedLawyerLandingPage() {
             ))}
           </nav>
           <Button
+            aria-label="Toggle Navbar on mobile"
             variant="ghost"
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -117,6 +122,7 @@ export default function EnhancedLawyerLandingPage() {
               precision and creativity.
             </p>
             <Button
+              aria-label="Go to our company whatsapp to start talking"
               size="lg"
               className="text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-200"
             >
@@ -169,6 +175,7 @@ export default function EnhancedLawyerLandingPage() {
                 </div>
               </div>
               <Button
+                aria-label="Move left the carousel"
                 variant="outline"
                 className="absolute top-1/2 left-4 transform -translate-y-1/2 rounded-full p-2"
                 onClick={prevReviewSlide}
@@ -176,6 +183,7 @@ export default function EnhancedLawyerLandingPage() {
                 <ChevronLeft className="h-6 w-6" />
               </Button>
               <Button
+                aria-label="Move right the carousel"
                 variant="outline"
                 className="absolute top-1/2 right-4 transform -translate-y-1/2 rounded-full p-2"
                 onClick={nextReviewSlide}
@@ -255,7 +263,7 @@ export default function EnhancedLawyerLandingPage() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-10 rounded-3xl transform rotate-3"></div>
                 <img
-                  src="/placeholder.svg"
+                  src="./favicon.svg"
                   alt="LegalSphere Team"
                   width={600}
                   height={400}
@@ -364,7 +372,10 @@ export default function EnhancedLawyerLandingPage() {
                       </div>
                     </div>
                     <div className="mt-8">
-                      <Button className="w-full text-lg py-6 rounded-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                      <Button
+                        aria-label="Message us now on whatsapp"
+                        className="w-full text-lg py-6 rounded-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                      >
                         <MessageCircle className="mr-2 h-5 w-5" />
                         Start WhatsApp Chat Now
                       </Button>

@@ -9,5 +9,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [react(), tailwind({ applyBaseStyles: false, })],
   site: 'https://Thiago-Heleno.github.io',
-  base: 'astro-landing-page',
+  base: '/astro-landing-page/',
 });
